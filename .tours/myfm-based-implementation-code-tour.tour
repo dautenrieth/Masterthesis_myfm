@@ -5,7 +5,7 @@
     {
       "file": "main.py",
       "description": "The config file contains the most important parameters needed for the execution of the program. In the files various options can be switched on and off, so that users do not have to investigate the code. For this reason, at the beginning of each module, the configuration is first loaded into the environment to give the program access to the parameters.",
-      "line": 24
+      "line": 20
     },
     {
       "file": "config.ini",
@@ -30,47 +30,47 @@
     {
       "file": "config.ini",
       "description": "In this section, the number of runs, the option whether to resample the negative edges, the number of iterations and the rank are specified. Altogether these are important parameters for a run.",
-      "line": 67
+      "line": 70
     },
     {
       "file": "main.py",
       "description": "The parameters from the config-file are then transferred into local variables",
-      "line": 31
+      "line": 32
     },
     {
       "file": "main.py",
       "description": "At the beginning of the run, the data that the model will use for training and predictions must be loaded. For this purpose we will take a look at the data generation module.",
-      "line": 47
+      "line": 48
     },
     {
       "file": "data_generation.py",
       "description": "This function is one of the longest, but follows a fairly straightforward flow. \r\n1. load parameters and define file names\r\n2. check if the files already exist (there is a difference between files with and without groups)\r\n-> If the files are found they are loaded and returned, if not the next step follows.\r\n3. the graph is loaded\r\n4. depending on if negative edges exist they will be loaded or created.\r\n5. the individual data parts are queried and if they are activated a sparse matrix is created and appended to the already existing one.\r\n6. the data is saved and the matrix and the target vector as well as the groups are returned. \r\nNote: groups cannot be used in myfm. But groups can still be generated if you want to use a different method in the future.\r\n",
-      "line": 25
+      "line": 33
     },
     {
       "file": "data_generation.py",
       "description": "This is Step 5 from the previous description. If for example the embeddings part is activated, a function is called, which processes the node edge data in a matrix. The procedure is the same for all data parts.",
-      "line": 116
+      "line": 143
     },
     {
       "file": "data_parts.py",
       "description": "In this module the functions for the individual data parts are defined. They always return a sparse matrix. ",
-      "line": 24
+      "line": 23
     },
     {
       "file": "main.py",
       "description": "The data is then used to train the defined model and generate predictions based on the test data.",
-      "line": 54
+      "line": 55
     },
     {
       "file": "main.py",
       "description": "The prediction metrics are analyzed and saved in an Excel file",
-      "line": 69
+      "line": 76
     },
     {
       "file": "main.py",
       "description": "This corresponds to the simplified program flow. For more detailed information, please refer to the function descriptions and commentaries. Have fun using the program!",
-      "line": 1
+      "line": 79
     }
   ]
 }
